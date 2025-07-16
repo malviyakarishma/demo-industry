@@ -1,0 +1,24 @@
+.services {
+    padding: 3rem 0;
+    background: #fff;
+    text-align: center;
+}
+
+.services h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #e6f1ff;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 250px;
+}

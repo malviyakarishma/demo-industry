@@ -1,0 +1,12 @@
+.header {
+    padding: 2rem 0;
+    background: #0a192f;
+    color: #fff;
+    text-align: center;
+}
+
+.nav a {
+    margin: 0 1rem;
+    color: #64ffda;
+    text-decoration: none;
+}

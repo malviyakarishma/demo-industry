@@ -10,7 +10,7 @@ export default function Header() {
                 <a href="/">Home</a>
                 <a href="/about">Company</a>
                 <a href="/gallery">Gallery</a>
-                <a href="/products">Products</a>
+                <a href="/product">Products</a>
                 <a href="/contact">Contact Us</a>
             </nav>
         </header>

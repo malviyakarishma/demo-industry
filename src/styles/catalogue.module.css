@@ -1,0 +1,133 @@
+.catalogueContainer {
+    background: white;
+    padding: 1rem 0;
+  }
+  
+.catalogueSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 3rem auto;
+    background: #e6f1ff;
+    padding: 3rem 2rem;
+    border-radius: 14px;
+    gap: 3rem;
+    box-shadow: 0 4px 24px rgba(34, 46, 68, 0.08);
+  }
+  
+  .imageWrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .catalogueImage {
+    width: 100%;
+    max-width: 400px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(17,34,64,0.12);
+  }
+  
+  .contentWrapper {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .heading {
+    font-size: 2rem;
+    color: #112240;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    line-height: 1.2;
+  }
+  
+  .description {
+    font-size: 1.15rem;
+    color: #3a3e4a;
+    margin-bottom: 1.3rem;
+    line-height: 1.6;
+    max-width: 550px;
+  }
+  
+  .highlight {
+    font-size: 1rem;
+    color: #0070f3;
+    font-weight: 600;
+    margin-bottom: 2.1rem;
+  }
+  
+  .downloadBtn {
+    display: inline-block;
+    padding: 0.85rem 2.5rem;
+    background: #0070f3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,112,243,0.08);
+    transition: background 0.2s, transform 0.2s;
+    margin-top: 0.6rem;
+    cursor: pointer;
+  }
+  
+  .downloadBtn:hover, .downloadBtn:focus {
+    background: #005ac1;
+    transform: translateY(-2px) scale(1.04);
+    text-decoration: none;
+  }
+  
+  @media (max-width: 900px) {
+    .catalogueSection {
+      flex-direction: column;
+      padding: 2.2rem 1.1rem;
+      gap: 2rem;
+    }
+    .imageWrapper, .contentWrapper {
+      justify-content: center;
+      align-items: center;
+    }
+    .contentWrapper {
+      align-items: center;
+      text-align: center;
+    }
+    .downloadBtn {
+      margin-top: 1.2rem;
+    }
+    .catalogueImage {
+      max-width: 320px;
+      height: 220px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .catalogueSection {
+      padding: 1.3rem 0.4rem;
+    }
+    .catalogueImage {
+      max-width: 95vw;
+      height: 140px;
+    }
+    .heading {
+      font-size: 1.3rem;
+    }
+    .description {
+      font-size: 1rem;
+    }
+    .highlight {
+      font-size: 0.98rem;
+    }
+    .downloadBtn {
+      font-size: 1rem;
+      padding: 0.7rem 1.4rem;
+    }
+  }
+  

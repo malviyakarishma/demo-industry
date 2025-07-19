@@ -13,6 +13,12 @@ const banners = [
     {
         image: "/images/banner3.png",
     },
+    {
+        image: "/images/banner2.png",
+    },
+    {
+        image: "/images/banner3.png",
+    },
 ];
 
 export default function HeroSection() {

@@ -1,0 +1,152 @@
+.aboutPage {
+    padding: 2rem 0;
+    background: white;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    gap: 3rem;
+}
+
+.content {
+    flex: 1;
+    padding: 0 1rem;
+}
+
+.image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionImage {
+    width: 100%;
+    max-width: 500px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.sectionImage:hover {
+    transform: scale(1.02);
+}
+
+.heading {
+    font-size: 2.2rem;
+    color: #112240;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+}
+
+.description:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .section {
+        padding: 3rem 1.5rem;
+        gap: 2rem;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .sectionImage {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column !important;
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .content {
+        padding: 0;
+    }
+
+    .heading {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .description {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+
+    .sectionImage {
+        height: 250px;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    .aboutPage {
+        padding: 1rem 0;
+    }
+
+    .section {
+        padding: 1.5rem 0.5rem;
+        gap: 1rem;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 0.8rem;
+    }
+
+    .sectionImage {
+        height: 200px;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 1rem 0.3rem;
+    }
+
+    .heading {
+        font-size: 1.3rem;
+    }
+
+    .description {
+        font-size: 0.85rem;
+    }
+
+    .sectionImage {
+        height: 180px;
+        max-width: 300px;
+    }
+}

@@ -1,7 +1,7 @@
 .hero {
     position: relative;
     width: 100%;
-    aspect-ratio: 16/6; /* or 16/9 or 2/1 — use the aspect ratio that matches your banner images! */
+    aspect-ratio: 2/1; /* or 16/9 or 2/1 — use the aspect ratio that matches your banner images! */
     max-height: 85vh;
     overflow: hidden;
   }

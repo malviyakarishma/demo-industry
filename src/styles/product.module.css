@@ -1,0 +1,234 @@
+.productSection {
+    padding: 4rem 2rem;
+    background: #f5f7fa;
+    text-align: center;
+}
+
+.heading {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: #112240;
+    font-weight: 700;
+}
+
+.productGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem auto;
+}
+
+.productCard {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.productCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.imageContainer {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.productImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.productCard:hover .productImage {
+    transform: scale(1.05);
+}
+
+.cardContent {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.productName {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #112240;
+    margin-bottom: 0.8rem;
+}
+
+.productDescription {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+}
+
+.learnMoreBtn {
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(135deg, #0070f3 0%, #005ac1 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+}
+
+.learnMoreBtn:hover {
+    background: linear-gradient(135deg, #005ac1 0%, #004494 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 112, 243, 0.3);
+}
+
+.viewMoreContainer {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.viewMoreBtn {
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, #e6f1ff 0%, #86a7d2 100%);
+    color: #112240;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(107, 158, 184, 0.3);
+}
+
+.viewMoreBtn:hover {
+    background: linear-gradient(135deg, #86a7d2 0%, #005ac1 100%);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(107, 158, 184, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .productSection {
+        padding: 3rem 1rem;
+    }
+
+    .heading {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .productGrid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .cardContent {
+        padding: 1.2rem;
+    }
+
+    .productName {
+        font-size: 1.2rem;
+    }
+
+    .productDescription {
+        font-size: 0.9rem;
+    }
+
+    .viewMoreBtn {
+        padding: 0.9rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .productSection {
+        padding: 2rem 0.5rem;
+    }
+
+    .heading {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .productGrid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+        max-width: 400px;
+    }
+
+    .imageContainer {
+        height: 180px;
+    }
+
+    .cardContent {
+        padding: 1rem;
+    }
+
+    .productName {
+        font-size: 1.1rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .productDescription {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+    }
+
+    .learnMoreBtn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .viewMoreBtn {
+        padding: 0.8rem 1.8rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .productSection {
+        padding: 1.5rem 0.3rem;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    .productGrid {
+        gap: 1rem;
+    }
+
+    .imageContainer {
+        height: 160px;
+    }
+
+    .cardContent {
+        padding: 0.8rem;
+    }
+
+    .productName {
+        font-size: 1rem;
+    }
+
+    .productDescription {
+        font-size: 0.8rem;
+    }
+
+    .learnMoreBtn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .viewMoreBtn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}

@@ -58,8 +58,8 @@ export default function Footer() {
                     <div className={styles.links}>
                         <h3>Quick Links</h3>
                         <ul><li><a href="/">Home</a></li>
-                            <li><a href="/company">Company</a></li>
-                            <li><a href="/products">Products</a></li>
+                            <li><a href="/about">Company</a></li>
+                            <li><a href="/product">Products</a></li>
                             <li><a href="/gallery">Gallery</a></li>
                             <li><a href="/contact">Contact Us</a></li>
                         </ul>

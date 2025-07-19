@@ -1,15 +1,18 @@
 import HeroSection from "../components/HeroSection";
 import Services from "../components/Services";
 import About from "../components/About";
-import Contact from "../components/Contact";
+import Product from "../components/product";
+import CatalogueSection from "../components/catalogue";
 
 export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <Services />
       <About />
-      <Contact />
+      <Product />
+      <CatalogueSection />
+      <Services />
+
     </>
   );
 }

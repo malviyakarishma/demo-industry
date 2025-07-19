@@ -1,6 +1,161 @@
 .footer {
-    padding: 1rem 0;
-    background: #112240;
-    color: #fff;
+    background: #e6f1ff;
+    color: black;
+    padding: 2.5rem 1.5rem 1rem 1.5rem;
+    font-family: inherit;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.left,
+.middle,
+.right {
+    flex: 1 1 250px;
+    min-width: 200px;
+    margin-bottom: 1.5rem;
+}
+
+.contact,
+.links,
+.domesticInquiry,
+.internationalInquiry {
+    margin-bottom: 1.5rem;
+}
+
+.footer h3 {
+    color: black;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.inquiryTitle {
+    font-size: 1rem !important;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    margin-bottom: 0.75rem;
+}
+
+.contactInfo {
+    line-height: 1.8;
+}
+
+.inquiryInfo {
+    line-height: 1.8;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.15rem;
+}
+
+.contact a,
+.links a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contact a:hover,
+.links a:hover {
+    color: #b4aaa9;
+    text-decoration: none;
+}
+
+/* Add hover effects for inquiry section links */
+.domesticInquiry a,
+.internationalInquiry a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.domesticInquiry a:hover,
+.internationalInquiry a:hover {
+    color: #b4aaa9;
+    text-decoration: none;
+}
+
+.links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.8;
+}
+
+.links li {
+    margin-bottom: 0.5rem;
+}
+
+.socialSection {
+    margin-top: 0;
+}
+
+.socialSection h3 {
+    margin-bottom: 1rem;
+}
+
+.socialIcons {
+    display: flex;
+    gap: 1.2rem;
+    margin: 0.5rem 0 1rem 0;
+}
+
+.socialIcons a {
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.07);
+    transition: background 0.2s;
+    padding: 0.25rem;
+}
+
+.socialIcons a:hover {
+    background: #b4aaa9;
+}
+
+.socialIcons svg {
+    display: block;
+}
+
+.copyright {
     text-align: center;
+    font-size: 0.95rem;
+    margin-top: 0.1rem;
+    color: black;
+    letter-spacing: 0.01em;
+    border-top: 1px solid rgba(255, 255, 255, 0.09);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding-top: 0.1rem;
+}
+
+/* Responsive: 1 column on mobile */
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .left,
+    .middle,
+    .right {
+        min-width: 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .footer {
+        padding: 1.5rem 0.35rem 0.7rem 0.35rem;
+    }
 }

@@ -1,16 +1,79 @@
 .hero {
-    padding: 4rem 0;
-    background: #f5f7fa;
-    text-align: center;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/6; /* or 16/9 or 2/1 — use the aspect ratio that matches your banner images! */
+    max-height: 85vh;
+    overflow: hidden;
+  }
+  
+
+.bgImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
 }
 
-.hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+.navBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #e6f1ff;
+    border: 1px solid #0070f3;
+    border-radius: 50%;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 2;
 }
 
-.hero p {
-    font-size: 1.25rem;
-    max-width: 600px;
-    margin: 0 auto;
+.left {
+    left: 1rem;
 }
+
+.right {
+    right: 1rem;
+}
+
+.dots {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.75rem;
+    z-index: 2;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e6f1ff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.activeDot {
+    background: #0070f3;
+    box-shadow: 0 0 0 2px #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+      aspect-ratio: 2/1;
+      max-height: 70vh;
+    }
+  }
+  @media (max-width: 600px) {
+    .hero {
+      aspect-ratio: 1.5/1;
+      max-height: 60vh;
+    }
+  }
+  

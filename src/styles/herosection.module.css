@@ -4,8 +4,21 @@
     aspect-ratio: 2/1; /* or 16/9 or 2/1 — use the aspect ratio that matches your banner images! */
     max-height: 85vh;
     overflow: hidden;
-  }
-  
+    cursor: pointer;
+    transition: cursor 0.2s ease;
+}
+
+.hero:hover {
+    cursor: grab;
+}
+
+.hero.dragging {
+    cursor: grabbing;
+}
+
+.hero.dragging:hover {
+    cursor: grabbing;
+}
 
 .bgImage {
     position: absolute;
@@ -14,27 +27,6 @@
     width: 100%;
     height: 100%;
     z-index: 0;
-}
-
-.navBtn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #e6f1ff;
-    border: 1px solid #0070f3;
-    border-radius: 50%;
-    font-size: 2rem;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    z-index: 2;
-}
-
-.left {
-    left: 1rem;
-}
-
-.right {
-    right: 1rem;
 }
 
 .dots {

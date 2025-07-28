@@ -2,108 +2,177 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 3vw;
-    background: #e6f1ff;
-    color: black;
+    padding: 1.5rem 3vw;
+    background: linear-gradient(90deg, #e6f1ff 0%, #c9e7ff 100%);
+    color: #112240;
+    border-radius: 0 0 1.5rem 1.5rem;
+    box-shadow: 0 4px 24px 0 rgba(0, 112, 243, 0.08), 0 1.5px 6px 0 rgba(0,0,0,0.04);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+    transition: box-shadow 0.2s;
 }
 
 .header h1 {
     margin: 0;
-    font-size: 2rem;
-    font-weight: 600;
-    letter-spacing: 1px;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+/* Example logo/icon area (can be replaced with an <img> or SVG) */
+.header h1::before {
+    content: "🏭";
+    font-size: 2.1rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.3rem;
 }
 
 .header h1 a {
     color: inherit;
     text-decoration: none;
+    background: linear-gradient(90deg, #0070f3 0%, #005ac1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .titleLink {
     color: inherit;
     text-decoration: none;
     display: inline-block;
+    font-weight: 700;
 }
 
 .nav {
     display: flex;
     gap: 2rem;
-    padding-right: 10rem;
+    padding-right: 0;
+    align-items: center;
 }
 
 .nav a {
-    color: black;
+    color: #112240;
     text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.2s;
+    font-size: 1.15rem;
+    font-weight: 500;
+    position: relative;
+    padding: 0.3rem 1.2rem;
+    border-radius: 0.5rem;
+    transition: color 0.2s, background 0.2s;
+    overflow: hidden;
+    text-decoration: none;
 }
 
-.nav a:hover {
-    color: #b4aaa9;
+.nav a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #0070f3 0%, #005ac1 100%);
+    transform: scaleX(0);
+    transition: transform 0.25s cubic-bezier(0.77,0,0.18,1);
+    border-radius: 2px;
+}
+
+.nav a:hover::after, .nav a:focus::after {
+    transform: scaleX(1);
+}
+
+/* Remove underline on hover/focus, only show animated underline */
+.nav a:hover, .nav a:focus {
+    color: #0070f3;
+    background: rgba(0,112,243,0.07);
+    text-decoration: none;
+}
+
+.nav a:active {
+    color: #005ac1;
+    background: rgba(0,90,193,0.10);
+    text-decoration: none;
+}
+
+.nav a.contactNavLink {
+    background: linear-gradient(90deg, #0070f3 0%, #005ac1 100%);
+    color: #fff !important;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,112,243,0.09);
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+}
+.nav a.contactNavLink:hover, .nav a.contactNavLink:focus {
+    background: linear-gradient(90deg, #005ac1 0%, #0070f3 100%);
+    color: #fff !important;
+    box-shadow: 0 4px 16px rgba(0,112,243,0.13);
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .header {
-        padding: 1.5rem 2vw;
-    }
-
-    .header h1 {
-        font-size: 1.6rem;
-    }
-
+@media (max-width: 900px) {
     .nav {
-        gap: 1.5rem;
-        padding-right: 5rem;
-    }
-
-    .nav a {
-        font-size: 1rem;
+        padding-right: 0;
+        gap: 1.2rem;
     }
 }
-
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .header {
-        padding: 1rem 1.5vw;
-        flex-direction: column;
-        gap: 1rem;
+        padding: 1.1rem 2vw;
+        border-radius: 0 0 1rem 1rem;
     }
-
     .header h1 {
-        font-size: 1.4rem;
-        text-align: center;
+        font-size: 1.5rem;
     }
-
     .nav {
         gap: 1rem;
+        padding-right: 0;
+    }
+    .nav a {
+        font-size: 1rem;
+        padding: 0.3rem 0.8rem;
+    }
+}
+@media (max-width: 600px) {
+    .header {
+        padding: 0.7rem 1vw;
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+    .header h1 {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    .nav {
+        gap: 0.7rem;
         padding-right: 0;
         justify-content: center;
         flex-wrap: wrap;
     }
-
     .nav a {
         font-size: 0.9rem;
-        padding: 0.5rem;
+        padding: 0.2rem 0.6rem;
     }
 }
-
 @media (max-width: 480px) {
     .header {
-        padding: 0.8rem 1vw;
-        gap: 0.8rem;
+        padding: 0.5rem 0.5vw;
+        gap: 0.5rem;
     }
-
     .header h1 {
-        font-size: 1.2rem;
+        font-size: 0.95rem;
     }
-
     .nav {
-        gap: 0.8rem;
+        gap: 0.5rem;
     }
-
     .nav a {
         font-size: 0.8rem;
-        padding: 0.4rem;
+        padding: 0.1rem 0.4rem;
     }
 }
 
@@ -123,6 +192,19 @@
 
     .nav a {
         font-size: 0.75rem;
-        padding: 0.3rem;
+        padding: 0.2rem 0.3rem;
     }
+}
+
+.headerVisible {
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 0.35s cubic-bezier(0.77,0,0.18,1), opacity 0.25s cubic-bezier(0.77,0,0.18,1);
+    pointer-events: auto;
+}
+.headerHidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.35s cubic-bezier(0.77,0,0.18,1), opacity 0.25s cubic-bezier(0.77,0,0.18,1);
+    pointer-events: none;
 }

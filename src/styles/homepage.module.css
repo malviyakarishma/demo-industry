@@ -1,0 +1,28 @@
+.sectionSpacing {
+  margin: 0 auto 3.5rem auto;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.altBg {
+  background: #f5f7fa;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.03);
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (max-width: 900px) {
+  .sectionSpacing {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    max-width: 98vw;
+  }
+  .altBg {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 1rem;
+  }
+} 

@@ -1,0 +1,126 @@
+.acrossWorldWrapper {
+  width: 100%;
+  text-align: center;
+  margin: 3rem 0 2rem 0;
+}
+
+.acrossWorldHeading {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #005ac1;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .acrossWorldHeading {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+  
+  .acrossWorldSubtext {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .acrossWorldWrapper {
+    margin: 2rem 0 1rem 0;
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .acrossWorldHeading {
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .acrossWorldSubtext {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
+  
+  .acrossWorldWrapper {
+    margin: 1.5rem 0 1rem 0;
+    padding: 0 0.25rem;
+  }
+}
+
+/* Android-specific fixes */
+@media screen and (max-width: 480px) and (orientation: portrait) {
+  .acrossWorldWrapper {
+    margin: 1rem 0;
+  }
+}
+
+/* Prevent shrinking on mobile */
+@media (max-width: 768px) {
+  .acrossWorldWrapper * {
+    flex-shrink: 0;
+  }
+}
+
+.plusFive {
+  font-size: 110%;
+  color: #005ac1;
+  font-weight: 700;
+  vertical-align: baseline;
+  margin-left: 0.1em;
+  letter-spacing: 0.5px;
+}
+
+.mapContainer {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.acrossWorldSubtext {
+  font-size: 1.2rem;
+  color: black;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+/* Move OpenLayers attribution (watermark) to top-right */
+.ol-attribution {
+  right: 8px !important;
+  left: auto !important;
+  top: 8px !important;
+  bottom: auto !important;
+}
+
+/* Tooltip SVG text background (for reference if needed) */
+.globeTooltip {
+  font-size: 18px;
+  font-weight: 700;
+  fill: #fff;
+  filter: drop-shadow(0 2px 8px rgba(0,90,193,0.18));
+}
+
+/* Fade-in animation for tooltip */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tooltipFadeIn {
+  animation: fadeIn 0.3s ease-out;
+} 

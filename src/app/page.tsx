@@ -3,6 +3,8 @@ import Services from "../components/Services";
 import About from "../components/About";
 import Product from "../components/product";
 import CatalogueSection from "../components/catalogue";
+import AcrossTheWorld from "../components/AcrossTheWorld";
+import Clients from "../components/Clients";
 
 export default function HomePage() {
   return (
@@ -11,8 +13,9 @@ export default function HomePage() {
       <About />
       <Product />
       <CatalogueSection />
+      <AcrossTheWorld />
+      <Clients />
       <Services />
-
     </>
   );
 }

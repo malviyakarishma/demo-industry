@@ -4,11 +4,11 @@ import styles from "../styles/About.module.css";
 export default function About() {
     return (
         <section id="about" className={styles.about}>
-            <h3 className={styles.heading}>Welcome to Tech Industry Solutions</h3>
+            <h3 className={styles.heading}>Welcome to Dev Vansh Engineers</h3>
 
             <div className={styles.content}>
                 <p className={styles.description}>
-                    Tech Industry Solutions is a team of passionate engineers, designers,
+                Dev Vansh Engineers is a team of passionate engineers, designers,
                     and strategists dedicated to helping businesses harness the power of technology.
                     With years of experience in the tech sector, we pride ourselves on delivering
                     innovative, reliable, and scalable solutions that drive real business growth.

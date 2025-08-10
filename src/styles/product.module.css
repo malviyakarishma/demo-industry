@@ -120,7 +120,7 @@
     background: linear-gradient(135deg, #e6f1ff 0%, #86a7d2 100%);
     color: #112240;
     border: none;
-    border-radius: 50px;
+    border-radius: 10px;
     font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;

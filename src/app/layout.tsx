@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export const metadata = {
-  title: "Tech Industry Solutions",
+  title: "Dev Vansh Engineers",
   description: "Innovative solutions for the modern tech industry.",
   
 };

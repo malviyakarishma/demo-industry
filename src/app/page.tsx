@@ -15,7 +15,6 @@ export default function HomePage() {
       <CatalogueSection />
       <AcrossTheWorld />
       <Clients />
-      <Services />
     </>
   );
 }

@@ -15,6 +15,7 @@
   color: #005ac1;
   margin-bottom: 0.5rem;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 .clientsSubtext {
@@ -22,4 +23,243 @@
   color: #333;
   margin-bottom: 1.5rem;
   font-weight: 500;
+  text-align: center;
+}
+
+.carouselContainer {
+  position: relative;
+  width: 1200px;
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 123, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.1s ease;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.navButton:hover {
+  background: rgba(0, 123, 255, 1);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 123, 255, 0.4);
+}
+
+.navButton:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.sliderContainer {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sliderTrack {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  position: relative;
+  user-select: none;
+  animation: slide 70s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.slideItem {
+  min-width: 240px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.slideItem:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.slideImage {
+  width: 240px;
+  height: 135px;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+  border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .clientsSection {
+    max-width: 95%;
+    margin: 2rem auto 1.5rem auto;
+    padding: 1.5rem;
+  }
+
+  .sliderContainer {
+    width: 90%;
+    max-width: 800px;
+  }
+
+  .slideItem {
+    min-width: 200px;
+  }
+
+  .slideImage {
+    width: 200px;
+    height: 112px;
+  }
+}
+
+@media (max-width: 768px) {
+  .clientsSection {
+    padding: 1rem;
+    margin: 1.5rem auto 1rem auto;
+  }
+
+  .clientsHeading {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .clientsSubtext {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .carouselContainer {
+    max-width: 100%;
+  }
+
+  .sliderContainer {
+    width: 95%;
+    padding: 4px;
+  }
+
+  .navButton {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .navButton:hover {
+    transform: translateY(-50%) scale(1.05);
+  }
+
+  .slideItem {
+    min-width: 160px;
+  }
+
+  .slideImage {
+    width: 160px;
+    height: 90px;
+  }
+
+  .sliderTrack {
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .clientsSection {
+    padding: 0.75rem;
+    margin: 1rem auto 0.5rem auto;
+    border-radius: 12px;
+  }
+
+  .clientsHeading {
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+  }
+
+  .clientsSubtext {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .sliderContainer {
+    width: 98%;
+    border-radius: 8px;
+    padding: 2px;
+  }
+
+  .navButton {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .slideItem {
+    min-width: 120px;
+  }
+
+  .slideImage {
+    width: 120px;
+    height: 67px;
+  }
+
+  .sliderTrack {
+    gap: 0.25rem;
+    padding: 0.25rem 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .clientsSection {
+    padding: 0.5rem;
+  }
+
+  .clientsHeading {
+    font-size: 1.1rem;
+  }
+
+  .clientsSubtext {
+    font-size: 0.8rem;
+  }
+
+  .slideItem {
+    min-width: 100px;
+  }
+
+  .slideImage {
+    width: 100px;
+    height: 56px;
+  }
+
+  .navButton {
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+  }
 } 

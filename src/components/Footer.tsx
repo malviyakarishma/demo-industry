@@ -9,7 +9,7 @@ export default function Footer() {
                     <div className={styles.contact}>
                         <h3>Contact Us</h3>
                         <p className={styles.contactInfo}>
-                            Tech Industry Solutions<br />
+                        Dev Vansh Engineerss<br />
                             <span className={styles.contactItem}>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style={{ marginRight: "8px" }}>
                                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
@@ -99,7 +99,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className={styles.copyright}>
-                &copy; {new Date().getFullYear()} Tech Industry Solutions. All rights reserved.
+                &copy; {new Date().getFullYear()} Dev Vansh Engineers. All rights reserved.
             </div>
         </footer>
     );

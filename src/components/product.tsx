@@ -1,4 +1,5 @@
 "use client"
+import { useRouter } from 'next/navigation';
 import styles from "../styles/product.module.css";
 
 const products = [
@@ -41,6 +42,12 @@ const products = [
 ];
 
 export default function Product() {
+    const router = useRouter();
+
+    const handleLearnMore = (productId: number) => {
+        router.push(`/product/${productId}`);
+    };
+
     return (
         <section className={styles.productSection}>
             <h2 className={styles.heading}>Products</h2>
@@ -58,7 +65,12 @@ export default function Product() {
                         <div className={styles.cardContent}>
                             <h3 className={styles.productName}>{product.name}</h3>
                             <p className={styles.productDescription}>{product.description}</p>
-                            <button className={styles.learnMoreBtn}>Learn More</button>
+                            <button 
+                                className={styles.learnMoreBtn}
+                                onClick={() => handleLearnMore(product.id)}
+                            >
+                                Learn More
+                            </button>
                         </div>
                     </div>
                 ))}

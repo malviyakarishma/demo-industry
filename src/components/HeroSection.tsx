@@ -8,13 +8,13 @@ const banners = [
         image: "/images/banner1.png",
     },
     {
-        image: "/images/banner2.png",
-    },
-    {
-        image: "/images/banner3.png",
+        image: "/images/banner5.png",
     },
     {
         image: "/images/banner4.png",
+    },
+    {
+        image: "/images/banner2.png",
     },
     {
         image: "/images/banner3.png",
@@ -39,9 +39,7 @@ function HeroSectionInner() {
 
     useEffect(() => {
         function updateWidth() {
-            if (typeof window !== 'undefined') {
-                setContainerWidth(window.innerWidth);
-            }
+            setContainerWidth(window.innerWidth);
         }
         updateWidth();
         window.addEventListener('resize', updateWidth);

@@ -19,7 +19,7 @@ function generateCaptcha() {
 
 
 export default function ContactPage() {
-  const [captcha, setCaptcha] = useState(generateCaptcha());
+  const [captcha, setCaptcha] = useState("");
   useEffect(() => {
     setCaptcha(generateCaptcha());
   }, []);
@@ -43,6 +43,12 @@ export default function ContactPage() {
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setError("");
+    
+    if (!captcha) {
+      setError("Please wait for captcha to load.");
+      return;
+    }
+    
     if (form.captchaInput !== captcha) {
       setError("Captcha does not match. Please try again.");
       setCaptcha(generateCaptcha());
@@ -88,7 +94,7 @@ export default function ContactPage() {
             Office Address
           </h2>
           <div className={styles.infoBlock}>
-            Tech Industry Solutions<br />
+          Dev Vansh Engineers<br />
             123 Business Park, Industry City<br />
             State, Country ZIP
           </div>
@@ -205,8 +211,8 @@ export default function ContactPage() {
                 </div>
                 <div className={styles.formRow} style={{ alignItems: 'center' }}>
                   <div className={styles.captchaBox}>
-                    <span className={styles.captchaText}>{captcha}</span>
-                    <button className={styles.captchaRefresh} onClick={handleRefreshCaptcha} title="Refresh captcha" type="button">
+                    <span className={styles.captchaText}>{captcha || "Loading..."}</span>
+                    <button className={styles.captchaRefresh} onClick={handleRefreshCaptcha} title="Refresh captcha" type="button" disabled={!captcha}>
                       &#x21bb;
                     </button>
                   </div>
@@ -233,7 +239,7 @@ export default function ContactPage() {
       </div>
       <div className={styles.mapContainer}>
   <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.3993812094163!2d72.66043261044416!3d23.009103716744765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e87b4b0288b7f%3A0xcafa71ee0c8affbe!2sRaghuleela%20Residency%2C%20RAGHULEELA%20RESIDENCY%2C%20Odhav%2C%20Vidya%20Nagar%2C%20Ahmedabad%2C%20Gujarat%20382415!5e0!3m2!1sen!2sin!4v1752939122601!5m2!1sen!2sin"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.94234848018!2d72.67290691044472!3d23.025888916118337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e8782b89091a9%3A0x9b2bad19226fef6e!2sDev%20Vansh%20Engineers!5e0!3m2!1sen!2sin!4v1754823114054!5m2!1sen!2sin"
     width="100%"
     height="350"
     style={{ border: 0, borderRadius: '12px' }}

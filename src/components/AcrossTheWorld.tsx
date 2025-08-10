@@ -5,10 +5,11 @@ import { geoMercator, GeoProjection } from "d3-geo";
 
 const geoUrl = "https://raw.githubusercontent.com/johan/world.geo.json/master/countries.geo.json";
 
-// Responsive dimensions
+// Default dimensions for SSR consistency
+const DEFAULT_DIMENSIONS = { width: 1600, height: 600 };
+
+// Responsive dimensions - only called on client side
 const getMapDimensions = () => {
-  if (typeof window === 'undefined') return { width: 1600, height: 600 };
-  
   const screenWidth = window.innerWidth;
   const screenHeight = window.innerHeight;
   
@@ -62,10 +63,13 @@ export default function AcrossTheWorld() {
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
   const [tooltipVisible, setTooltipVisible] = useState(false);
-  const [mapDimensions, setMapDimensions] = useState(getMapDimensions());
+  const [mapDimensions, setMapDimensions] = useState(DEFAULT_DIMENSIONS);
 
-  // Handle window resize
+  // Set initial dimensions and handle window resize
   useEffect(() => {
+    // Set initial dimensions after component mounts
+    setMapDimensions(getMapDimensions());
+    
     const handleResize = () => {
       setMapDimensions(getMapDimensions());
     };

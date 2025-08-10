@@ -16,7 +16,7 @@ export default function CatalogueSection() {
       <div className={styles.contentWrapper}>
         <h2 className={styles.heading}>Discover Our Catalogue</h2>
         <p className={styles.description}>
-          At Tech Industry Solutions, we believe in delivering only the best quality and innovation to our clients.
+          At Dev Vansh Engineers, we believe in delivering only the best quality and innovation to our clients.
           Our catalogue showcases our commitment to technological advancement, robust engineering, and customer-focused solutions.
           Explore the range and see why we’re trusted by leading manufacturers worldwide.
         </p>

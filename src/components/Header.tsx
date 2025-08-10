@@ -32,7 +32,13 @@ export default function Header() {
     return (
         <header className={`${styles.header} ${showHeader ? styles.headerVisible : styles.headerHidden}`}>
             <h1 className={styles.title}>
-                <a href="/" className={styles.titleLink}>Industry Solutions</a>
+                <a href="/" className={styles.titleLink}>
+                    <img 
+                        src="/images/Logo11.jpg" 
+                        alt="Industry Solutions Logo" 
+                        className={styles.logo}
+                    />
+                </a>
             </h1>
             <nav className={styles.nav}>
                 <a href="/">Home</a>

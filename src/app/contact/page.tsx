@@ -22,6 +22,7 @@ function generateCaptcha() {
 
 export default function ContactPage() {
   const [captcha, setCaptcha] = useState("");
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     setCaptcha(generateCaptcha());
   }, []);
@@ -59,6 +60,7 @@ export default function ContactPage() {
     }
   
     // Send form data to API
+    setLoading(true);
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -81,6 +83,9 @@ export default function ContactPage() {
       }
     } catch (err) {
       setError("An error occurred. Please try again.");
+    }
+    finally {
+      setLoading(false); // 👈 stop loading
     }
   }
   
@@ -235,8 +240,8 @@ export default function ContactPage() {
                 {error && (
                   <div className={styles.error}>{error}</div>
                 )}
-                <button className={styles.submitBtn} type="submit">
-                  Submit
+                <button className={styles.submitBtn} type="submit"disabled={loading} >
+                {loading ? "Sending..." : "Submit"}
                 </button>
               </>
             )}

@@ -1,13 +1,11 @@
 import nodemailer from "nodemailer";
 import { NextRequest, NextResponse } from "next/server";
+import EmailTemplate from "@/template/emailTemplate";
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json();
 
-    console.log("Received request body in email form :", body); 
-
-    const { name, email, country, mobile, requirement } = body;
+    const { name, email, country, mobile, requirement } = await request.json();
 
     if (!email || !requirement) {
       return NextResponse.json({ error: "Email and requirement required" }, { status: 400 });
@@ -21,20 +19,15 @@ export async function POST(request: NextRequest) {
       },
     });
 
-    const text = `
-      New Inquiry:
-      Name: ${name}
-      Email: ${email}
-      Country: ${country}
-      Mobile: ${mobile}
-      Requirement: ${requirement}
-    `;
+    const logoUrl =  `${process.env.DOMAIN}/images/Logo11.jpg`
+
+    const html = EmailTemplate({ name, email, country, mobile, requirement, logoUrl });
 
     await transporter.sendMail({
       from: email,
       to: process.env.GMAIL_USER,
-      subject: "New Inquiry from Website",
-      text,
+      subject: "New Inquiry for Dev Vansh Engineers",
+      html,
     });
 
     return NextResponse.json({ ok: true });

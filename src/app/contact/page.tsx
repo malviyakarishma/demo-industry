@@ -42,24 +42,48 @@ export default function ContactPage() {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setError("");
-    
+  
     if (!captcha) {
       setError("Please wait for captcha to load.");
       return;
     }
-    
+  
     if (form.captchaInput !== captcha) {
       setError("Captcha does not match. Please try again.");
       setCaptcha(generateCaptcha());
       setForm((f) => ({ ...f, captchaInput: "" }));
       return;
     }
-    // Implement actual form sending logic here (API etc.)
-    setSubmitted(true);
+  
+    // Send form data to API
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          country: form.country,
+          mobile: form.mobile,
+          requirement: form.requirement,
+        }),
+      });
+  
+      const data = await res.json();
+  
+      if (res.ok && data.ok) {
+        setSubmitted(true);
+      } else {
+        setError(data.error || "Failed to send message.");
+      }
+    } catch (err) {
+      setError("An error occurred. Please try again.");
+    }
   }
+  
 
   function handleRefreshCaptcha(e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault();

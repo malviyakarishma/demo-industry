@@ -5,7 +5,7 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
 
-    console.log("Received request body:", body); 
+    console.log("Received request body in email form :", body); 
 
     const { name, email, country, mobile, requirement } = body;
 

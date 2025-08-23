@@ -24,11 +24,9 @@
 
 .contact,
 .links,
-.domesticInquiry,
-.internationalInquiry {
+.domesticInquiry{
     margin-bottom: 1.5rem;
 }
-
 .footer h3 {
     color: black;
     font-weight: 600;
@@ -56,7 +54,7 @@
 .contactItem {
     display: flex;
     align-items: center;
-    margin-bottom: 0.15rem;
+    margin-bottom: 0.1rem;
 }
 
 .contact a,

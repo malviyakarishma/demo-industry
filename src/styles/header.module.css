@@ -116,6 +116,7 @@
     }
     .logo {
         height: 80px;
+        padding-left: 5px;
     }
     .nav {
         gap: 1rem;

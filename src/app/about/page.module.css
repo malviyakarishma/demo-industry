@@ -39,11 +39,15 @@
 }
 
 .heading {
-    font-size: 2.2rem;
-    color: #112240;
-    margin-bottom: 1.5rem;
-    font-weight: 700;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #005ac1;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    text-align: center;
     line-height: 1.2;
+    margin-bottom: 1.5rem;
+    padding-right: 60px;
 }
 
 .description {

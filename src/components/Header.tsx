@@ -34,7 +34,7 @@ export default function Header() {
             <h1 className={styles.title}>
                 <a href="/" className={styles.titleLink}>
                     <img 
-                        src="/images/Logo11.jpg" 
+                        src="/images/Logo.jpg" 
                         alt="Industry Solutions Logo" 
                         className={styles.logo}
                     />
